@@ -86,7 +86,7 @@ Therefore,
 
 $$
 \begin{cases}
-z=\ln(2\pi k)+i\left(\dfrac\pi2+2\pi m\right), & k>0,\ \ k,m\in\mathbb{Z},\\[6pt]
+z=\ln(2\pi k)+i\left(\dfrac\pi2+2\pi m\right), & k>0,\ \ k,m\in\mathbb{Z},\\
 z=\ln(-2\pi k)+i\left(\dfrac{3\pi}{2}+2\pi m\right), & k<0,\ \ k,m\in\mathbb{Z}.
 \end{cases}
 $$
