@@ -123,3 +123,47 @@
 .article .article-meta .level-item:nth-child(4)::before { content: "\f017"; } /* readtime */
 .article .article-meta .level-item#busuanzi_container_page_pv::before { content: "\f06e"; } /* eye */
 
+/* Move meta row below title */
+article.card-content.article {
+  display: flex;
+  flex-direction: column;
+}
+
+article.card-content.article > h1.title {
+  order: 1;
+}
+
+article.card-content.article > .article-meta {
+  order: 2;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+article.card-content.article > .content {
+  order: 3;
+}
+
+/* Title a bit smaller */
+.article .title.is-3 {
+  font-size: 2.45rem;
+  line-height: 1.18;
+}
+
+/* Wider content span on desktop */
+@media (min-width: 1216px) {
+  .section .columns {
+    align-items: flex-start;
+  }
+
+  .section .columns > .column.column-left {
+    width: 300px;
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+
+  .section .columns > .column.column-main {
+    flex: 1 1 auto;
+    max-width: calc(100% - 300px);
+  }
+}
+
