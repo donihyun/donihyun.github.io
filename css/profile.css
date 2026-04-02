@@ -4,7 +4,7 @@
  * - Respect YAML newlines via `white-space: pre-line`
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Merriweather:wght@300;400;700&family=Oswald:wght@400;500;600&display=swap');
 
 /* Only affect the profile card. */
 .card.widget[data-type="profile"] {
@@ -57,3 +57,55 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ===== Article typography/layout cleanup (reference-inspired) ===== */
+.article .title,
+.article h1,
+.article h2,
+.article h3 {
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.article .title.is-3 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 1.1rem;
+}
+
+.article .content {
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  font-size: 1.28rem;
+  line-height: 1.85;
+  color: #2d2d2d;
+}
+
+.article .content h2 {
+  font-size: 2.15rem;
+  font-weight: 500;
+  margin-top: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.article .content h3 {
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+
+/* Hide duplicate-looking anchor text beside section titles */
+.article .content .headerlink {
+  display: none;
+}
+
+/* Cleaner metadata row */
+.article .article-meta {
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.article .article-meta .level-item {
+  margin-right: 1rem;
+}
+
