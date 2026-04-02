@@ -9,6 +9,6 @@
 
 hexo.extend.injector.register(
   'head_end',
-  '<link rel="stylesheet" href="/css/profile.css">'
+  '<link rel="stylesheet" href="/css/profile.css?v=20260402-0838">'
 );
 
