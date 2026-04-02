@@ -12,63 +12,57 @@ math: true
 
 ## Introduction
 
-We want all complex numbers \(z\in\mathbb{C}\) satisfying
+In this note, we solve the equation
 
 $$
-e^{e^z}=1.
+e^{e^z}=1,
 $$
 
-Write
+for all complex numbers \(z\in\mathbb{C}\).
+
+A useful idea is to first solve a simpler outer equation, and then pull it back through the inner exponential.
+
+## Step 1: Solve \(e^w=1\)
+
+For complex \(w\),
 
 $$
-z=x+iy,\quad x,y\in\mathbb{R}.
+e^w=1 \quad \Longleftrightarrow \quad w=2\pi i k,\ \ k\in\mathbb{Z}.
 $$
 
-## Step 1: Reduce to an equation of the form \(e^z = \cdots\)
-
-If \(e^w=1\), then
+Now let \(w=e^z\). Then
 
 $$
-w=2\pi i k,\quad k\in\mathbb{Z}.
+e^z=2\pi i k,\qquad k\in\mathbb{Z}.
 $$
 
-Set \(w=e^z\). Then
+Since \(e^z\neq 0\), the case \(k=0\) is impossible. So we only consider \(k\in\mathbb{Z}\setminus\{0\}\).
+
+## Step 2: Solve \(e^z=2\pi i k\)
+
+Write \(z=x+iy\) with \(x,y\in\mathbb{R}\). Then
 
 $$
-e^z=2\pi i k,\quad k\in\mathbb{Z}.
+e^z=e^{x+iy}=e^x(\cos y+i\sin y).
 $$
 
-Since \(e^z\neq 0\), we must have \(k\neq 0\).
-
-So we solve
+Matching real and imaginary parts with \(2\pi i k\):
 
 $$
-e^z=2\pi i k,\quad k\in\mathbb{Z}\setminus\{0\}.
+e^x\cos y=0,
+\qquad
+ e^x\sin y=2\pi k.
 $$
 
-## Step 2: Split into real and imaginary parts
-
-Using
+Because \(e^x>0\), the first equation gives \(\cos y=0\), so
 
 $$
-e^z=e^{x+iy}=e^x(\cos y+i\sin y),
+y=\frac\pi2+n\pi,\qquad n\in\mathbb{Z}.
 $$
 
-we get
+Hence \(\sin y=\pm1\), and we split by the sign of \(k\):
 
-$$
-e^x\cos y=0,\qquad e^x\sin y=2\pi k.
-$$
-
-Because \(e^x>0\), the first equation gives \(\cos y=0\), hence
-
-$$
-y=\frac\pi2+n\pi,\quad n\in\mathbb{Z}.
-$$
-
-So \(\sin y=\pm1\).
-
-- **Case \(k>0\):** need \(\sin y=1\), so
+- If \(k>0\), then \(\sin y=1\), so
   $$
   y=\frac\pi2+2\pi m,\quad m\in\mathbb{Z},
   $$
@@ -77,7 +71,7 @@ So \(\sin y=\pm1\).
   x=\ln(2\pi k).
   $$
 
-- **Case \(k<0\):** need \(\sin y=-1\), so
+- If \(k<0\), then \(\sin y=-1\), so
   $$
   y=\frac{3\pi}{2}+2\pi m,\quad m\in\mathbb{Z},
   $$
@@ -88,22 +82,19 @@ So \(\sin y=\pm1\).
 
 ## Final Solution Set
 
-Therefore the complete set of solutions is
+Therefore,
 
 $$
-z=\ln(2\pi k)+i\left(\frac\pi2+2\pi m\right),\quad k>0,\ k,m\in\mathbb{Z},
+\begin{cases}
+z=\ln(2\pi k)+i\left(\dfrac\pi2+2\pi m\right), & k>0,\ \ k,m\in\mathbb{Z},\\[6pt]
+z=\ln(-2\pi k)+i\left(\dfrac{3\pi}{2}+2\pi m\right), & k<0,\ \ k,m\in\mathbb{Z}.
+\end{cases}
 $$
 
-or
+Equivalently, with \(k\in\mathbb{Z}\setminus\{0\}\):
 
 $$
-z=\ln(-2\pi k)+i\left(\frac{3\pi}{2}+2\pi m\right),\quad k<0,\ k,m\in\mathbb{Z}.
+z=\ln(2\pi|k|)+i\big(\arg(ik)+2\pi m\big),\qquad m\in\mathbb{Z},
 $$
 
-Equivalent compact form:
-
-$$
-z=\ln(2\pi|k|)+i\big(\arg(ik)+2\pi m\big),\quad k\in\mathbb{Z}\setminus\{0\},\ m\in\mathbb{Z}.
-$$
-
-with \(\arg(ik)=\frac\pi2\) for \(k>0\), and \(\arg(ik)=\frac{3\pi}{2}\) for \(k<0\) (mod \(2\pi\)).
+where \(\arg(ik)=\frac\pi2\) when \(k>0\), and \(\arg(ik)=\frac{3\pi}{2}\) when \(k<0\) (mod \(2\pi\)).
