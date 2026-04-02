@@ -165,8 +165,8 @@ article.card-content.article > .article-comment {
 /* Wider content span on desktop */
 @media (min-width: 1216px) {
   .section > .container {
-    max-width: 1260px !important;
-    width: 94% !important;
+    max-width: 1160px !important;
+    width: 90% !important;
   }
 
   .section .columns {
@@ -174,15 +174,15 @@ article.card-content.article > .article-comment {
   }
 
   .section .columns > .column.column-left {
-    width: 280px !important;
-    flex: 0 0 280px !important;
-    max-width: 280px !important;
+    width: 270px !important;
+    flex: 0 0 270px !important;
+    max-width: 270px !important;
   }
 
   .section .columns > .column.column-main {
-    width: calc(100% - 280px) !important;
-    flex: 0 0 calc(100% - 280px) !important;
-    max-width: calc(100% - 280px) !important;
+    width: calc(100% - 270px) !important;
+    flex: 0 0 calc(100% - 270px) !important;
+    max-width: calc(100% - 270px) !important;
   }
 }
 
