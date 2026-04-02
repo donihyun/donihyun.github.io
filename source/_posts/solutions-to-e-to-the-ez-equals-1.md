@@ -7,6 +7,7 @@ tags:
   - complex analysis
   - exponential
   - equations
+  - mathematics
 math: true
 ---
 
