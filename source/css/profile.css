@@ -158,8 +158,9 @@ article.card-content.article > .article-comment {
 
 /* Title a bit smaller */
 .article .title.is-3 {
-  font-size: 2.45rem;
-  line-height: 1.18;
+  font-size: 1.95rem;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
 /* Wider content span on desktop */
