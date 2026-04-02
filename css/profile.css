@@ -165,8 +165,8 @@ article.card-content.article > .article-comment {
 /* Wider content span on desktop */
 @media (min-width: 1216px) {
   .section > .container {
-    max-width: 1400px !important;
-    width: 96% !important;
+    max-width: 1260px !important;
+    width: 94% !important;
   }
 
   .section .columns {
