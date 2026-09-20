@@ -1,215 +1,83 @@
-/* Profile widget typography tweaks to get a Lei-Mao-like feel:
- * - Serif name
- * - Italic, smaller multi-line title
- * - Respect YAML newlines via `white-space: pre-line`
+/* Editorial blog · Icarus layout, PT typography.
+ * Reference: https://leimao.github.io/ · user's own content and identity.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Merriweather:wght@300;400;700&family=Oswald:wght@400;500;600&display=swap');
-
-/* Only affect the profile card. */
-.card.widget[data-type="profile"] {
-  --profile-serif: "Cormorant Garamond", Georgia, "Times New Roman", Times, serif;
+:root {
+  --font-body: "PT Serif", serif;
+  --font-heading: "PT Sans Narrow", sans-serif;
+  --color-paper: #f7f7f7;
+  --color-ink: #4a4a4a;
 }
 
-/* Name */
-.card.widget[data-type="profile"] .card-content > nav.level:first-of-type p.title {
-  font-family: var(--profile-serif);
+html, body { overflow-x: clip; }
+html { background: var(--color-paper); }
+body, button, input, select, textarea { font-family: var(--font-body); }
+body { color: var(--color-ink); line-height: 1.5; }
+
+.navbar-main .navbar-item {
+  font-family: var(--font-heading);
+  font-size: 1.125em;
   font-weight: 700;
-  letter-spacing: 0.01em;
-  font-size: 1.75rem; /* smaller than default is-size-4 */
-  line-height: 1.05;
-  margin-bottom: 0.35rem;
-}
-
-/* Title (multi-line) */
-.card.widget[data-type="profile"] .card-content > nav.level:first-of-type p.is-size-6.is-block {
-  font-family: var(--profile-serif);
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.1rem;
-  line-height: 1.25;
-  white-space: pre-line; /* make YAML newlines render as line breaks */
-  margin-top: 0;
-  margin-bottom: 0.35rem;
-}
-
-/* Location */
-.card.widget[data-type="profile"] .card-content > nav.level:first-of-type p.is-size-6.is-flex {
-  /* Match reference: location is larger and not italic, with normal theme font */
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  margin-top: 0;
-}
-
-.card.widget[data-type="profile"] .card-content > nav.level:first-of-type p.is-size-6.is-flex i {
-  font-size: 1.15em;
-}
-
-/* Center align like the reference screenshot. */
-.card.widget[data-type="profile"] .card-content > nav.level:first-of-type .level-item.has-text-centered {
-  text-align: center !important;
-}
-
-.card.widget[data-type="profile"] .card-content > nav.level:first-of-type figure.image {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ===== Article typography/layout cleanup (reference-inspired) ===== */
-.article .title,
-.article h1,
-.article h2,
-.article h3 {
-  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
-  letter-spacing: 0.01em;
-}
-
-.article .title.is-3 {
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 1.15;
-  margin-bottom: 1.1rem;
-}
-
-.article .content {
-  font-family: "Merriweather", Georgia, "Times New Roman", serif;
-  font-size: 1.28rem;
-  line-height: 1.85;
-  color: #2d2d2d;
-}
-
-.article .content h2 {
-  font-size: 2.15rem;
-  font-weight: 500;
-  margin-top: 2.2rem;
-  margin-bottom: 0.8rem;
-}
-
-.article .content h3 {
-  font-size: 1.55rem;
-  font-weight: 500;
-}
-
-/* Hide duplicate-looking anchor text beside section titles */
-.article .content .headerlink {
-  display: none;
-}
-
-/* Cleaner metadata row */
-.article .article-meta {
-  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
-}
-
-.article .article-meta .level-item {
-  margin-right: 1rem;
-}
-
-/* Add missing metadata icons (date / category / readtime / views) */
-.article .article-meta .level-item::before {
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  margin-right: 0.42rem;
-  color: #767676;
-}
-
-.article .article-meta .level-item:nth-child(1)::before { content: "\f133"; } /* calendar */
-.article .article-meta .level-item:nth-child(2)::before { content: "\f017"; } /* clock(updated) */
-.article .article-meta .level-item:nth-child(3)::before { content: "\f07c"; } /* folder/category */
-.article .article-meta .level-item:nth-child(4)::before { content: "\f017"; } /* readtime */
-.article .article-meta .level-item#busuanzi_container_page_pv::before { content: "\f06e"; } /* eye */
-
-/* Move meta row below title, while keeping all support blocks after content */
-article.card-content.article {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Reset default order for all direct children first */
-article.card-content.article > * {
-  order: 10;
-}
-
-article.card-content.article > h1.title {
-  order: 1;
-}
-
-article.card-content.article > .article-meta {
-  order: 2;
-  margin-top: 0.2rem;
-  margin-bottom: 1rem;
-}
-
-article.card-content.article > .content {
-  order: 3;
-}
-
-article.card-content.article > .article-licensing,
-article.card-content.article > .article-tags,
-article.card-content.article > .notification,
-article.card-content.article > .article-nav,
-article.card-content.article > .article-comment {
-  order: 20;
-}
-
-/* Title a bit smaller */
-.article .title.is-3 {
-  font-size: 1.95rem;
-  line-height: 1.2;
-  font-weight: 600;
-}
-
-/* Wider content span on desktop */
-@media (min-width: 1216px) {
-  .section > .container {
-    max-width: 1160px !important;
-    width: 90% !important;
-  }
-
-  .section .columns {
-    align-items: flex-start;
-  }
-
-  .section .columns > .column.column-left {
-    width: 270px !important;
-    flex: 0 0 270px !important;
-    max-width: 270px !important;
-  }
-
-  .section .columns > .column.column-main {
-    width: calc(100% - 270px) !important;
-    flex: 0 0 calc(100% - 270px) !important;
-    max-width: calc(100% - 270px) !important;
-  }
-}
-
-/* Navbar style to match reference: uppercase + bold + left aligned */
-.navbar.navbar-main .navbar-container {
-  justify-content: flex-start !important;
-}
-
-.navbar.navbar-main .navbar-brand {
-  justify-content: flex-start !important;
-  margin-right: 0.75rem;
-  flex: 0 0 auto;
-}
-
-.navbar.navbar-main .navbar-menu {
-  flex: 1 1 auto;
-}
-
-.navbar.navbar-main .navbar-start {
-  justify-content: flex-start !important;
-}
-
-.navbar.navbar-main .navbar-item {
   text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  font-size: 0.95rem;
+  white-space: nowrap;
 }
 
+article.card-content.article { display: flex; flex-direction: column; }
+article.card-content.article > * { order: 3; }
+article.card-content.article > .title { order: 0; }
+article.card-content.article > .article-meta { order: 1; }
+article.card-content.article > .content { order: 2; }
+
+article.article > .title,
+article.article .content :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-style: normal;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+article.article > .title { font-size: 2rem; line-height: 1.125; margin-bottom: 1.5rem; }
+article.article .content { font-size: 1.1rem; line-height: 1.5; margin-top: 1rem; }
+article.article .article-meta { margin-bottom: 0.5rem; overflow: visible; }
+.article-meta .level-left { flex-wrap: wrap; flex-shrink: 1; min-width: 0; max-width: 100%; gap: 0.4rem 0; }
+.article-meta .level-item { white-space: nowrap; }
+article.article .content .headerlink { display: none; }
+article.article .content > style + :is(h1, h2, h3) { margin-top: 0; }
+
+.card.widget[data-type="profile"] .card-content > nav:first-child p.title {
+  margin-bottom: 0.3rem;
+  font-weight: 400;
+}
+.card.widget[data-type="profile"] .card-content > nav:first-child p.is-block:not(.title) {
+  font-size: 0.8em !important;
+  font-style: italic;
+  white-space: pre-line;
+  margin-bottom: 0.5rem;
+}
+.column-main, .column-left { min-width: 0; }
+#toc .level-left, #toc .level-item { min-width: 0; }
+#toc .level-item { white-space: normal; overflow-wrap: anywhere; }
+
+/* Keep wide equations scrollable inside the article, including on phones. */
+article.article .content mjx-container[display="true"] {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 0.25rem 0;
+}
+
+@media (min-width: 1280px) {
+  body.is-2-column .container { width: 1216px; max-width: calc(100% - 3rem); }
+  .section .column-left { width: 25%; flex: none; }
+  .section .column-main { width: 75%; flex: none; }
+}
+@media (min-width: 1472px) {
+  body.is-2-column .container { width: 1344px; }
+}
+@media (max-width: 768px) {
+  .navbar.navbar-main .navbar-menu { min-width: 0; justify-content: flex-start !important; }
+  .navbar-main .navbar-start { overflow-x: auto; justify-content: flex-start !important; }
+  .article-meta .level-left { align-items: flex-start; }
+  .card-content { padding: 1.25rem; }
+}
