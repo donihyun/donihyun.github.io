@@ -1,14 +1,11 @@
-/* Inject a small CSS override for the Icarus profile widget.
- *
- * Hexo runs any JS files under `scripts/` at build time.
- * This uses Hexo's injector API (same mechanism you see as
- * `<!-- hexo injector head_end start -->` in generated HTML).
- */
-
 'use strict';
 
-hexo.extend.injector.register(
-  'head_end',
-  '<link rel="stylesheet" href="/css/profile.css?v=20260402-1052">'
-);
+const { createHash } = require('node:crypto');
+const { readFileSync } = require('node:fs');
+const { join } = require('node:path');
+const version = createHash('sha256')
+  .update(readFileSync(join(hexo.source_dir, 'css/profile.css')))
+  .digest('hex').slice(0, 12);
 
+hexo.extend.injector.register('head_end',
+  `<link rel="stylesheet" href="/css/profile.css?v=${version}">`);

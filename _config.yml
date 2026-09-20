@@ -63,3 +63,13 @@ deploy:
   type: git
   repo: https://github.com/donihyun/donihyun.github.io.git
   branch: gh-pages
+
+# Preserve TeX while parsing Markdown and render equations during the build.
+markdown:
+  render:
+    html: true
+    breaks: false
+    linkify: true
+    typographer: false
+  plugins:
+    - markdown-it-mathjax3
