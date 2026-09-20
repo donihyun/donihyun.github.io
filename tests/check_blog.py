@@ -102,7 +102,7 @@ try:
         WebDriverWait(driver, 20).until(lambda d: any('solutions-to-e-to-the-ez-equals-1' in a.get_attribute('href') for a in d.find_elements(By.CSS_SELECTOR, '.searchbox-result-item')))
         driver.find_element(By.CSS_SELECTOR, '.searchbox-close').click()
         if route != '/':
-            assert len(driver.find_elements(By.CSS_SELECTOR, '#toc math msup')) == 2
+            assert len(driver.find_elements(By.CSS_SELECTOR, '#toc svg [data-mml-node=msup]')) == 2
             assert len(driver.find_elements(By.CSS_SELECTOR, '.a2a_kit > a')) == 9
     (output / 'checks.json').write_text(json.dumps(rows, indent=2))
 finally:
