@@ -1,0 +1,270 @@
+{
+  "source": "https://leimao.github.io/blog/Residual-Quantized-Variational-Autoencoder/",
+  "measured": "2026-09-20",
+  "widths": {
+    "375": {
+      ".section > .container": {
+        "width": 335
+      },
+      ".column-main": {
+        "width": 356
+      },
+      ".column-left": {
+        "width": 356
+      },
+      "article.article": {
+        "padding": "21px"
+      },
+      "article.article > .title": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "28px",
+        "weight": "700",
+        "line": "31.5px",
+        "margin": "0px 0px 21px"
+      },
+      "article.article .content": {
+        "font": "\"PT Serif\", serif",
+        "size": "15.4px",
+        "line": "23.1px"
+      },
+      "article.article .content h2": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "23.1px",
+        "weight": "700",
+        "line": "25.9833px"
+      },
+      ".profile-author-title": {
+        "font": "\"PT Serif\", serif",
+        "size": "21px",
+        "line": "31.5px",
+        "margin": "0px 0px 4.2px"
+      },
+      ".profile-author-subtitle": {
+        "font": "\"PT Serif\", serif",
+        "size": "11.2px",
+        "line": "16.8px",
+        "margin": "0px 0px 7px"
+      }
+    },
+    "768": {
+      ".section > .container": {
+        "width": 728
+      },
+      ".column-main": {
+        "width": 749
+      },
+      ".column-left": {
+        "width": 749
+      },
+      "article.article": {
+        "padding": "21px"
+      },
+      "article.article > .title": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "28px",
+        "weight": "700",
+        "line": "31.5px",
+        "margin": "0px 0px 21px"
+      },
+      "article.article .content": {
+        "font": "\"PT Serif\", serif",
+        "size": "15.4px",
+        "line": "23.1px"
+      },
+      "article.article .content h2": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "23.1px",
+        "weight": "700",
+        "line": "25.9833px"
+      },
+      ".profile-author-title": {
+        "font": "\"PT Serif\", serif",
+        "size": "21px",
+        "line": "31.5px",
+        "margin": "0px 0px 4.2px"
+      },
+      ".profile-author-subtitle": {
+        "font": "\"PT Serif\", serif",
+        "size": "11.2px",
+        "line": "16.8px",
+        "margin": "0px 0px 7px"
+      }
+    },
+    "1088": {
+      ".section > .container": {
+        "width": 960
+      },
+      ".column-main": {
+        "width": 654
+      },
+      ".column-left": {
+        "width": 326.98333740234375
+      },
+      "article.article": {
+        "padding": "21px"
+      },
+      "article.article > .title": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "28px",
+        "weight": "700",
+        "line": "31.5px",
+        "margin": "0px 0px 21px"
+      },
+      "article.article .content": {
+        "font": "\"PT Serif\", serif",
+        "size": "15.4px",
+        "line": "23.1px"
+      },
+      "article.article .content h2": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "23.1px",
+        "weight": "700",
+        "line": "25.9833px"
+      },
+      ".profile-author-title": {
+        "font": "\"PT Serif\", serif",
+        "size": "21px",
+        "line": "31.5px",
+        "margin": "0px 0px 4.2px"
+      },
+      ".profile-author-subtitle": {
+        "font": "\"PT Serif\", serif",
+        "size": "11.2px",
+        "line": "16.8px",
+        "margin": "0px 0px 7px"
+      }
+    },
+    "1280": {
+      ".section > .container": {
+        "width": 1216
+      },
+      ".column-main": {
+        "width": 927.75
+      },
+      ".column-left": {
+        "width": 309.25
+      },
+      "article.article": {
+        "padding": "21px"
+      },
+      "article.article > .title": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "28px",
+        "weight": "700",
+        "line": "31.5px",
+        "margin": "0px 0px 21px"
+      },
+      "article.article .content": {
+        "font": "\"PT Serif\", serif",
+        "size": "15.4px",
+        "line": "23.1px"
+      },
+      "article.article .content h2": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "23.1px",
+        "weight": "700",
+        "line": "25.9833px"
+      },
+      ".profile-author-title": {
+        "font": "\"PT Serif\", serif",
+        "size": "21px",
+        "line": "31.5px",
+        "margin": "0px 0px 4.2px"
+      },
+      ".profile-author-subtitle": {
+        "font": "\"PT Serif\", serif",
+        "size": "11.2px",
+        "line": "16.8px",
+        "margin": "0px 0px 7px"
+      }
+    },
+    "1440": {
+      ".section > .container": {
+        "width": 1216
+      },
+      ".column-main": {
+        "width": 927.75
+      },
+      ".column-left": {
+        "width": 309.25
+      },
+      "article.article": {
+        "padding": "21px"
+      },
+      "article.article > .title": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "28px",
+        "weight": "700",
+        "line": "31.5px",
+        "margin": "0px 0px 21px"
+      },
+      "article.article .content": {
+        "font": "\"PT Serif\", serif",
+        "size": "15.4px",
+        "line": "23.1px"
+      },
+      "article.article .content h2": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "23.1px",
+        "weight": "700",
+        "line": "25.9833px"
+      },
+      ".profile-author-title": {
+        "font": "\"PT Serif\", serif",
+        "size": "21px",
+        "line": "31.5px",
+        "margin": "0px 0px 4.2px"
+      },
+      ".profile-author-subtitle": {
+        "font": "\"PT Serif\", serif",
+        "size": "11.2px",
+        "line": "16.8px",
+        "margin": "0px 0px 7px"
+      }
+    },
+    "1600": {
+      ".section > .container": {
+        "width": 1344
+      },
+      ".column-main": {
+        "width": 1023.75
+      },
+      ".column-left": {
+        "width": 341.25
+      },
+      "article.article": {
+        "padding": "21px"
+      },
+      "article.article > .title": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "28px",
+        "weight": "700",
+        "line": "31.5px",
+        "margin": "0px 0px 21px"
+      },
+      "article.article .content": {
+        "font": "\"PT Serif\", serif",
+        "size": "15.4px",
+        "line": "23.1px"
+      },
+      "article.article .content h2": {
+        "font": "\"PT Sans Narrow\", sans-serif",
+        "size": "23.1px",
+        "weight": "700",
+        "line": "25.9833px"
+      },
+      ".profile-author-title": {
+        "font": "\"PT Serif\", serif",
+        "size": "21px",
+        "line": "31.5px",
+        "margin": "0px 0px 4.2px"
+      },
+      ".profile-author-subtitle": {
+        "font": "\"PT Serif\", serif",
+        "size": "11.2px",
+        "line": "16.8px",
+        "margin": "0px 0px 7px"
+      }
+    }
+  }
+}

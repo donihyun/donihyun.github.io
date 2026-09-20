@@ -841,10 +841,20 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@nodable/entities@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/@nodable/entities/-/entities-3.0.0.tgz"
+  integrity sha512-8L9xFeTYKhm49xfIypoe2W5wV1m/3Z58kT+7kR9A8OyFxcPduI4VmxaUMQyKYrRjUoLLSXv6EKKID5Tvj9cUVw==
+
 "@se-oss/deasync-linux-arm64-gnu@1.0.1":
   version "1.0.1"
   resolved "https://registry.npmjs.org/@se-oss/deasync-linux-arm64-gnu/-/deasync-linux-arm64-gnu-1.0.1.tgz"
   integrity sha512-657uRew7fZAx663Li03ilLV2lN09Dqb/NxawlDu8kKmboK1BLitHJRS+taiT5oFZqyIDrU45tlQKfCrW0p0sYA==
+
+"@se-oss/deasync-linux-arm64-musl@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@se-oss/deasync-linux-arm64-musl/-/deasync-linux-arm64-musl-1.0.1.tgz"
+  integrity sha512-IE3fIQPIJtko4lx9sRam+Zz0P4xbpAPJgDCHaz6k9cP1yUvVI179B4IZRnFx0GyjyQpm0KhHoIGHJc4KUmA81Q==
 
 "@se-oss/deasync@^1.0.1":
   version "1.0.1"
@@ -904,6 +914,11 @@ anymatch@~3.1.2:
   dependencies:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
+
+anynum@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/anynum/-/anynum-1.0.1.tgz"
+  integrity sha512-N6//FLET/tXYNM/F6ABca1oH6fWB+KlTt909Le28WMDBk8oaT4vY17DCrwg2MvmuqUKt3Ni4N5dGJ/EoBgcO6A==
 
 archy@^1.0.0:
   version "1.0.0"
@@ -1314,6 +1329,11 @@ entities@^4.2.0, entities@^4.5.0:
   resolved "https://registry.npmjs.org/entities/-/entities-4.5.0.tgz"
   integrity sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==
 
+entities@^7.0.0:
+  version "7.0.1"
+  resolved "https://registry.npmjs.org/entities/-/entities-7.0.1.tgz"
+  integrity sha512-TWrgLOFUQTH994YUyl1yT4uyavY5nNB5muff+RtWaqNVCAK408b5ZnnbNAUEWLTCpum9w6arT70i1XdQ4UeOPA==
+
 entities@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npmjs.org/entities/-/entities-7.0.1.tgz"
@@ -1373,6 +1393,34 @@ fast-uri@^3.0.1:
   version "3.1.0"
   resolved "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.0.tgz"
   integrity sha512-iPeeDKJSWf4IEOasVVrknXpaBV0IApz/gp7S2bb7Z4Lljbl2MGJRqInZiUrQwV16cpzw/D3S5j5Julj/gT52AA==
+
+fast-xml-builder@^1.2.0:
+  version "1.3.1"
+  resolved "https://registry.npmjs.org/fast-xml-builder/-/fast-xml-builder-1.3.1.tgz"
+  integrity sha512-pIM/1n3ntFXKYrUZwW7QCK0gAW7XY+wzj1YMIV3tLDvPj/V+zTGJK5e3/4WJfwj0qWw2ElNXiTixda/R+3YSug==
+  dependencies:
+    path-expression-matcher "^1.6.2"
+    xml-naming "^0.3.0"
+
+fast-xml-parser@^5.3.3:
+  version "5.11.1"
+  resolved "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.11.1.tgz"
+  integrity sha512-TBw6K/fxoQGGjCmZDw9w/ZwP3uDcnTM4YH/g+PFRWr8sbe5idXtxNN6vITh4+1ruCZaho6uBFurElsA7F0zzgw==
+  dependencies:
+    "@nodable/entities" "^3.0.0"
+    fast-xml-builder "^1.2.0"
+    is-unsafe "^2.0.0"
+    path-expression-matcher "^1.6.2"
+    strnum "^2.4.2"
+    xml-naming "^0.3.0"
+
+feedsmith@2.9.0:
+  version "2.9.0"
+  resolved "https://registry.npmjs.org/feedsmith/-/feedsmith-2.9.0.tgz"
+  integrity sha512-TYucytOx4bTrD4ON0iuJG9y0Me7fiT0EZ+7MIE0xptvd8TL6nY0Z1jVPa9W39WMJUtPqV2r27TQxL/z5DCCmdA==
+  dependencies:
+    entities "^7.0.0"
+    fast-xml-parser "^5.3.3"
 
 filelist@^1.0.4:
   version "1.0.4"
@@ -1572,6 +1620,14 @@ hexo-generator-category@^2.0.0:
   dependencies:
     hexo-pagination "3.0.0"
 
+hexo-generator-feed@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/hexo-generator-feed/-/hexo-generator-feed-4.0.0.tgz"
+  integrity sha512-wG0SDBwJ60B+bcMQhArjSpw/bsuP1/4o9Ar+FnxTMRq5/SEZZlj7q/r7HI60olRf0eurqEm4Dm8yHfAMKQhkoA==
+  dependencies:
+    feedsmith "2.9.0"
+    hexo-util "4.0.0"
+
 hexo-generator-index@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/hexo-generator-index/-/hexo-generator-index-4.0.0.tgz"
@@ -1718,6 +1774,19 @@ hexo-util@^3.0.1, hexo-util@^3.2.0, hexo-util@^3.3.0:
     strip-indent "^3.0.0"
 
 hexo-util@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/hexo-util/-/hexo-util-4.0.0.tgz"
+  integrity sha512-oXKXBs1HZ2Wu/eq0paAVqtCmAEcqJPZ4xxSVRuwAplm1hFU41Ul53WA5bmYMEz9Dp+OJ/SdchjXRmYlbGJdt3w==
+  dependencies:
+    camel-case "^4.1.2"
+    cross-spawn "^7.0.3"
+    deepmerge "^4.2.2"
+    highlight.js "^11.6.0"
+    htmlparser2 "^10.0.0"
+    prismjs "^1.29.0"
+    strip-indent "^3.0.0"
+
+hexo-util@4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/hexo-util/-/hexo-util-4.0.0.tgz"
   integrity sha512-oXKXBs1HZ2Wu/eq0paAVqtCmAEcqJPZ4xxSVRuwAplm1hFU41Ul53WA5bmYMEz9Dp+OJ/SdchjXRmYlbGJdt3w==
@@ -1923,6 +1992,11 @@ is-plain-object@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/is-plain-object/-/is-plain-object-5.0.0.tgz"
   integrity sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==
+
+is-unsafe@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/is-unsafe/-/is-unsafe-2.0.2.tgz"
+  integrity sha512-HgbIHPBH0KHHCcjLfGsCvhtPTVxjaAZlXjwdz7/GQC40SjSe4sfQsar8J5VFo8JOSbarkpV0OLG95bbaNd9aAQ==
 
 is-wsl@^2.2.0:
   version "2.2.0"
@@ -2339,6 +2413,11 @@ path-exists@^3.0.0:
   resolved "https://registry.npmjs.org/path-exists/-/path-exists-3.0.0.tgz"
   integrity sha512-bpC7GYwiDYQ4wYLe+FA8lhRjhQCMcQGuSgGGqDkg/QerRWw9CmGRT0iSOVRSZJ29NMLZgIzqaljJ63oaL4NIJQ==
 
+path-expression-matcher@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/path-expression-matcher/-/path-expression-matcher-1.6.2.tgz"
+  integrity sha512-enSlaiat05iasnzmgNxRj8reFdj3puY2QpNgP1aPIaVfT6nn9ICuPoFlKHk8EN22HcwewshO+mN2DGbkCEOtqQ==
+
 path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz"
@@ -2616,6 +2695,13 @@ strip-indent@^3.0.0:
   dependencies:
     min-indent "^1.0.0"
 
+strnum@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.npmjs.org/strnum/-/strnum-2.4.2.tgz"
+  integrity sha512-rDG3Ah4TV0k1hWvLSzkZtMmLN9+eS+h3knq4MP6A42Y3Yh5qGNnOUs1jJkoSr8FG5dsL28c7KgkIBzSEykqtuw==
+  dependencies:
+    anynum "^1.0.1"
+
 stylus@*, stylus@^0.62.0:
   version "0.62.0"
   resolved "https://registry.npmjs.org/stylus/-/stylus-0.62.0.tgz"
@@ -2771,6 +2857,11 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz"
   integrity sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==
+
+xml-naming@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npmjs.org/xml-naming/-/xml-naming-0.3.0.tgz"
+  integrity sha512-ghig2TBE/H11aOVgmahA3MhimvkBr6JIYknH/Dhdk10nXwdbIqBJsbfMxpvFPG8bAw77gN29aQWvKpmVoPlvPQ==
 
 yallist@^3.0.2:
   version "3.1.1"

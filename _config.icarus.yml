@@ -4,7 +4,7 @@ version: 5.1.0
 variant: default
 # Path or URL to the website's logo
 # Leave blank to show the site title text in the navbar (from _config.yml -> title)
-logo: ''
+logo: https://github.com/donihyun.png?size=64
 # Page metadata configurations
 head:
     # URL or path to the website's icon
@@ -101,12 +101,12 @@ head:
         # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
         - ''
     # URL or path to the website's RSS atom.xml
-    rss: 
+    rss: /atom.xml
 # Page top navigation bar configurations
 navbar:
     # Navigation menu items
     menu:
-        Home: /
+        "doni hyun's blog": /
         Articles: /categories/article/
         Archives: /archives
         Categories: /categories
@@ -165,6 +165,8 @@ search:
     index_pages: true
 # Enable donation services only after configuring real account details.
 donates: []
+share:
+    type: addtoany
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -195,11 +197,22 @@ widgets:
           Github:
               icon: fab fa-github
               url: https://github.com/donihyun
+          RSS:
+              icon: fas fa-rss
+              url: /atom.xml
     - position: left
       type: toc
       index: true
-      collapsed: false
+      collapsed: true
       depth: 3
+    - position: left
+      type: categories
+    - position: right
+      type: recent_posts
+    - position: right
+      type: archives
+    - position: right
+      type: tags
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
@@ -219,7 +232,7 @@ plugins:
         tracking_id: 
     # BuSuanZi site/page view counter
     # https://busuanzi.ibruce.info
-    busuanzi: false
+    busuanzi: true
     # CNZZ statistics
     # https://www.umeng.com/web
     cnzz:

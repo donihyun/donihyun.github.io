@@ -1,6 +1,7 @@
 ---
 title: Solving exp(exp(z)) = 1 on the Complex Plane
 date: 2026-04-01 11:55:00
+updated: 2026-04-02 10:57:45.902
 categories:
   - article
 tags:
