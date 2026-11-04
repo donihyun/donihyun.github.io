@@ -1,6 +1,7 @@
 ---
 title: 'Memory Systems: From SRAM Caches to TLBs'
 date: 2026-05-03 14:20:00
+updated: 2026-05-03 14:20:00
 categories:
   - article
 tags:
