@@ -33,6 +33,8 @@ module.exports = class extends Component {
         const updateTime = article && article.update_time !== undefined ? article.update_time : true;
         const isUpdated = page.updated && !moment(page.date).isSame(moment(page.updated));
         const shouldShowUpdated = page.updated && ((updateTime === 'auto' && isUpdated) || updateTime === true);
+        // The title is already shown above. Avoid repeating math-heavy titles in the license box.
+        const licensingPage = { ...page, title: '' };
 
         return <Fragment>
             {/* Main content */}
@@ -96,7 +98,7 @@ module.exports = class extends Component {
                     <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
                     {/* Licensing block */}
                     {!index && article && article.licenses && Object.keys(article.licenses)
-                        ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null}
+                        ? <ArticleLicensing.Cacheable page={licensingPage} config={config} helper={helper} /> : null}
                     {/* Tags */}
                     {page.tags && page.tags.length ? <Fragment>
                         <hr class="article-divider" />
