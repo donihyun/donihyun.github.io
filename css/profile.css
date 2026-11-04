@@ -1,0 +1,241 @@
+/* Hallmark · macrostructure: Catalogue · tone: editorial · anchor hue: blue
+ * pre-emit critique: P4 H4 E4 S4 R4 V4 · contrast: pass · mobile: pass
+ */
+/* Editorial blog · Icarus layout, PT typography.
+ * Reference: https://leimao.github.io/ · user's own content and identity.
+ */
+
+:root {
+  --font-body: "PT Serif", serif;
+  --font-heading: "PT Sans Narrow", sans-serif;
+  --color-paper: oklch(97.8% 0.003 270);
+  --color-ink: oklch(35% 0.01 260);
+  --color-card: oklch(99.8% 0.005 260);
+  --color-rule: oklch(92% 0.008 260);
+  --color-muted: oklch(59% 0.01 260);
+  --color-accent: oklch(58% 0.18 255);
+  --color-accent-hover: oklch(50% 0.18 255);
+  --space-xs: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.25rem;
+  --space-section: 2.75rem;
+  --space-nav: 3.75rem;
+  --radius-card: 0.3rem;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.07), 0 0 1px rgba(0, 0, 0, 0.12);
+  --shadow-navbar: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+html, body { overflow-x: clip; }
+html { background: var(--color-paper); }
+body, button, input, select, textarea { font-family: var(--font-body); }
+body { color: var(--color-ink); line-height: 1.5; }
+body, .navbar-main, .footer { background: var(--color-paper); }
+
+.navbar-main {
+  min-height: var(--space-nav);
+  background: var(--color-card);
+  border-bottom: 1px solid var(--color-rule);
+  box-shadow: var(--shadow-navbar);
+}
+
+.navbar-main .navbar-item {
+  color: var(--color-ink);
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+}
+.navbar-main .navbar-item:hover,
+.navbar-main .navbar-item.is-active { color: var(--color-accent); }
+.navbar-main .navbar-logo { color: var(--color-ink); }
+.navbar-main .navbar-logo img { border-radius: 50%; }
+
+.section { padding-top: var(--space-section); }
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.card-content { padding: var(--space-lg); }
+.card + .card { margin-top: var(--space-lg); }
+
+.navbar-main .navbar-item {
+  padding: 1.25rem 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+article.article > .title,
+article.article .content :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-style: normal;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+article.article > .title { font-size: 2rem; line-height: 1.125; margin-bottom: 1.5rem; }
+article.article .content { font-size: 1.1rem; line-height: 1.5; margin-top: var(--space-md); }
+article.article .article-meta { margin-bottom: 0.5rem; overflow: visible; }
+.article-meta .level-left { margin-bottom: 0.5rem; }
+.article-meta .level-left { flex-wrap: wrap; flex-shrink: 1; min-width: 0; max-width: 100%; gap: 0.4rem 0; }
+.article-meta .level-item { white-space: nowrap; }
+article.article .content .headerlink { display: none; }
+article.article .content > style + :is(h1, h2, h3) { margin-top: 0; }
+
+.article-index > .title {
+  margin-bottom: var(--space-xs);
+  font-size: 1.75rem;
+  line-height: 1.15;
+}
+.article-index > .title a { color: var(--color-accent); }
+.article-index > .title a:hover { color: var(--color-accent-hover); }
+.article-index .content {
+  margin-top: var(--space-xs);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+/* Index cards do not include the post's MathJax stylesheet, so hide its screen-reader layer here. */
+article.article.article-index .title mjx-assistive-mml {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.article-index .article-meta {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+.article-index .article-more {
+  float: right;
+  margin-top: 0;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border-color: var(--color-rule);
+}
+.article-index .article-more:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.card.widget[data-type="profile"] .card-content > nav:first-child p.title {
+  margin-bottom: 0.3rem;
+  font-weight: 400;
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  line-height: 1.125;
+}
+.card.widget[data-type="profile"] .profile-author-subtitle {
+  font-size: 1rem !important;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: pre-line;
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+.card.widget[data-type="profile"] .card-content > nav:first-child p.is-size-6.is-flex {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0;
+}
+.card.widget[data-type="profile"] .card-content > nav:first-child .level-item.has-text-centered {
+  text-align: center !important;
+}
+.column-main, .column-left { min-width: 0; }
+#toc .level-left, #toc .level-item { min-width: 0; }
+#toc .level-item { white-space: normal; overflow-wrap: anywhere; }
+
+/* Keep wide equations scrollable inside the article, including on phones. */
+article.article .content mjx-container[display="true"] {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  margin: 0.5em 0;
+  padding: 0.25rem 0;
+}
+
+@media (min-width: 1280px) {
+  body:is(.is-2-column, .is-3-column) .container { width: 1216px; max-width: 100%; }
+  .is-2-column .section .column-left { width: 25%; flex: none; }
+  .is-2-column .section .column-main { width: 75%; flex: none; }
+}
+@media (min-width: 1472px) {
+  body:is(.is-2-column, .is-3-column) .container { width: 1344px; }
+}
+@media (max-width: 768px) {
+  .navbar.navbar-main .navbar-menu { min-width: 0; justify-content: flex-start !important; }
+  .navbar-main .navbar-start { overflow-x: auto; justify-content: flex-start !important; }
+  .article-meta .level-left { align-items: flex-start; }
+  article.article.article-index .article-tags { width: 100%; }
+  .article-index .article-more { float: none; margin-top: var(--space-xs); }
+
+}
+
+/* Reference template details; keep the site's own data and links. */
+:root {
+  --color-night-paper: #0e1225;
+  --color-night-surface: rgba(40, 44, 52, 0.5);
+  --color-night-hover: rgba(40, 44, 52, 0.8);
+  --color-night-control: #373d48;
+  --color-night-border: #434a56;
+  --color-night-ink: #c0c0c0;
+  --color-night-link: #5299e0;
+  --color-night-highlight: #fff;
+}
+button.navbar-item { border: 0; background: transparent; cursor: pointer; color: inherit; }
+button.navbar-item:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }
+.navbar-main .navbar-container { overflow-x: auto; }
+.profile-author-title { font-weight: 400; }
+.profile-social-links { flex-wrap: nowrap; justify-content: center; }
+.profile-social-link { font-size: 1em; padding: 0.15rem 0.25rem; min-width: auto; flex-shrink: 1; }
+.article-divider { height: 1px; margin: 1rem 0; }
+article.article .article-tags { display: flex; flex-wrap: wrap; margin-bottom: 1rem; }
+article.article .article-licensing { overflow-wrap: anywhere; }
+.article-licensing .licensing-meta .level-left { flex-wrap: wrap; }
+.a2a_kit { display: flex; flex-wrap: wrap; gap: 4px; }
+.a2a_kit a { margin: 0; }
+
+article.article.article-index .article-tags {
+  display: inline-flex;
+  width: calc(100% - 8rem);
+  margin-bottom: 0;
+  vertical-align: top;
+}
+
+@media (min-width: 1088px) and (max-width: 1279px) {
+  body .navbar-main > .container { max-width: 960px; width: 960px; }
+}
+@media (min-width: 1280px) {
+  body .navbar-main > .container { max-width: 1216px; width: 1216px; }
+}
+@media (min-width: 1472px) {
+  body .navbar-main > .container { max-width: 1344px; width: 1344px; }
+}
+html.night, .night body { background: var(--color-night-paper); color-scheme: dark; }
+.night :is(.navbar, .card, .footer) { background-color: var(--color-night-surface); }
+.night .card:hover { background-color: var(--color-night-hover); }
+.night :is(body, strong, time, .title, .footer, .card, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .navbar-item, .menu-list a, .menu-label, .level-item, .input, .textarea, .article-licensing) { color: var(--color-night-ink); }
+.night :is(.has-text-grey, .link-muted) { color: var(--color-night-ink) !important; }
+.night a { color: var(--color-night-link); }
+.night a:hover { color: var(--color-night-highlight); }
+.night :is(.button, .content blockquote, .article-licensing, .tag, .menu-list a:hover) { color: var(--color-night-ink); background-color: var(--color-night-control); border-color: var(--color-night-border); }
+.night :is(.button:hover, .menu-list a.is-active, .input, .textarea) { color: var(--color-night-ink); background-color: var(--color-night-border); }
+.night :is(.button.is-transparent, .navbar-menu) { background-color: transparent; }
+.night hr { background-color: var(--color-night-border); }
+.night :is(.content table td, .content table th, .menu-list li ul, .timeline) { border-color: var(--color-night-border); }
+.night .content table th { color: var(--color-night-ink); }
+.night .searchbox :is(.searchbox-container, .searchbox-header, .searchbox-input, .searchbox-close, .searchbox-body, .searchbox-result-section, .searchbox-result-item) { color: var(--color-night-ink); background-color: var(--color-night-control); border-color: var(--color-night-border); }
+.night .searchbox-result-item:hover { background-color: var(--color-night-border); }
+.night .timeline .media:last-child:after { background-color: var(--color-night-paper); }
