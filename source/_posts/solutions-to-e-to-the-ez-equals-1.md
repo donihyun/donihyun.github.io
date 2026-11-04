@@ -2,6 +2,7 @@
 title: 'Solving $e^{e^z}=1$ on the Complex Plane'
 date: 2026-04-01 11:55:00
 updated: 2026-04-02 10:57:45.902
+description: 'A short complex-analysis note on solving the nested exponential equation e^(e^z) = 1.'
 categories:
   - article
 tags:

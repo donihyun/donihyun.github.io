@@ -2,6 +2,7 @@
 title: 'Memory Systems: From SRAM Caches to TLBs'
 date: 2026-05-03 14:20:00
 updated: 2026-05-03 14:20:00
+description: 'A guided tour of the memory hierarchy, from SRAM and caches to paging, page tables, and the TLB.'
 categories:
   - article
 tags:

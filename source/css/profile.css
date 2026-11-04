@@ -95,6 +95,20 @@ article.article .content > style + :is(h1, h2, h3) { margin-top: 0; }
   font-size: 1rem;
   line-height: 1.55;
 }
+/* Index cards do not include the post's MathJax stylesheet, so hide its screen-reader layer here. */
+article.article.article-index .title mjx-assistive-mml {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 .article-index .article-meta {
   color: var(--color-muted);
   font-size: 0.75rem;

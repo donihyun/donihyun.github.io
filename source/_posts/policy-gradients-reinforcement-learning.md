@@ -2,6 +2,7 @@
 title: 'Policy Gradients: The Straightforward Route to Reinforcement Learning'
 date: 2026-01-18 14:20:00
 updated: 2026-01-18 14:20:00
+description: 'A practical derivation of REINFORCE, reward-to-go, baselines, advantage estimates, and importance sampling.'
 categories:
   - article
 tags:

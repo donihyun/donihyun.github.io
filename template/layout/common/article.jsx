@@ -94,8 +94,10 @@ module.exports = class extends Component {
                             }}></span> : null}
                         </div>
                     </div> : null}
-                    {/* Content/Excerpt */}
-                    <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
+                    {/* Content/Description */}
+                    {index && page.description
+                        ? <div class="content"><p class="article-description">{page.description}</p></div>
+                        : <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>}
                     {/* Licensing block */}
                     {!index && article && article.licenses && Object.keys(article.licenses)
                         ? <ArticleLicensing.Cacheable page={licensingPage} config={config} helper={helper} /> : null}

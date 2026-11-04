@@ -2,6 +2,7 @@
 title: 'Q-Learning and Fitted Value Iteration'
 date: 2025-11-29 14:20:00
 updated: 2025-11-29 14:20:00
+description: 'A compact guide to Bellman backups, fitted Q iteration, function approximation, and off-policy learning.'
 categories:
   - article
 tags:
