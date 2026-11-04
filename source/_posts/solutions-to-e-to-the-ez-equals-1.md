@@ -24,6 +24,8 @@ for all complex numbers $z\in\mathbb{C}$.
 
 A useful idea is to first solve a simpler outer equation, and then pull it back through the inner exponential.
 
+<!-- more -->
+
 ## Step 1: Solve $e^w=1$
 
 For complex $w$,

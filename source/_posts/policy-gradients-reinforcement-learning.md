@@ -17,6 +17,8 @@ Value based methods learn how good an action is and recover a policy from those 
 
 This direct objective is attractive, especially for continuous actions, but it introduces a difficult estimation problem. A policy changes the distribution of entire trajectories, and the reward of one trajectory can be noisy. The policy gradient derivation explains both why the method works and why practical algorithms need variance reduction.
 
+<!-- more -->
+
 ## Optimizing a trajectory distribution
 
 Let a trajectory be

@@ -45,7 +45,7 @@ module.exports = class extends Component {
                         <img class="fill" src={cover} alt={page.title || cover} />
                     </span>}
                 </div> : null}
-                <article class={`card-content article${'direction' in page ? ' ' + page.direction : ''}`} role="article">
+                <article class={`card-content article${index ? ' article-index' : ''}${'direction' in page ? ' ' + page.direction : ''}`} role="article">
                     {/* Title */}
                     {page.title !== '' && index ? <h1 class="title is-3"><a class="link-muted" href={url_for(page.link || page.path)} dangerouslySetInnerHTML={{ __html: titleHtml }}></a></h1> : null}
                     {page.title !== '' && !index ? <h1 class="title is-3" dangerouslySetInnerHTML={{ __html: titleHtml }}></h1> : null}

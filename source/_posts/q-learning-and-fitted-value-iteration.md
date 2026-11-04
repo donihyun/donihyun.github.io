@@ -17,6 +17,8 @@ Value functions turn a long-horizon decision problem into a repeated prediction 
 
 The tabular version is elegant, but it breaks down when the state is an image, a robot configuration, or any other high-dimensional continuous object. Fitted value iteration and fitted Q iteration keep the same Bellman idea while replacing the table with a function approximator.
 
+<!-- more -->
+
 ## The Bellman optimality operator
 
 For a value function $V$, the Bellman optimality operator is

@@ -15,6 +15,8 @@ math: true
 
 Memory is not one uniform resource. A modern system combines several layers with different capacities, latencies, and addressing rules. This note connects the pieces: SRAM and DRAM, CPU caches, segmentation, paging, multi-level page tables, and the translation lookaside buffer (TLB).
 
+<!-- more -->
+
 ## SRAM and DRAM
 
 Static random-access memory (SRAM) is faster than dynamic random-access memory (DRAM), but it is also more expensive and less dense. That trade-off makes SRAM a good fit for small CPU caches such as L1, L2, and L3, while DRAM provides the larger main-memory pool.
