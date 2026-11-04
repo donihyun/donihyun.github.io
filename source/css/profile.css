@@ -60,6 +60,7 @@ article.article .content mjx-container[display="true"] {
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
+  margin: 0.5em 0;
   padding: 0.25rem 0;
 }
 

@@ -29,6 +29,7 @@ module.exports = class extends Component {
         const indexLanguage = toMomentLocale(defaultLanguage || 'en');
         const language = toMomentLocale(page.lang || page.language || defaultLanguage || 'en');
         const cover = page.cover ? url_for(page.cover) : null;
+        const titleHtml = page.title_html || page.title;
         const updateTime = article && article.update_time !== undefined ? article.update_time : true;
         const isUpdated = page.updated && !moment(page.date).isSame(moment(page.updated));
         const shouldShowUpdated = page.updated && ((updateTime === 'auto' && isUpdated) || updateTime === true);
@@ -46,8 +47,8 @@ module.exports = class extends Component {
                 </div> : null}
                 <article class={`card-content article${'direction' in page ? ' ' + page.direction : ''}`} role="article">
                     {/* Title */}
-                    {page.title !== '' && index ? <h1 class="title is-3"><a class="link-muted" href={url_for(page.link || page.path)}>{page.title}</a></h1> : null}
-                    {page.title !== '' && !index ? <h1 class="title is-3">{page.title}</h1> : null}
+                    {page.title !== '' && index ? <h1 class="title is-3"><a class="link-muted" href={url_for(page.link || page.path)} dangerouslySetInnerHTML={{ __html: titleHtml }}></a></h1> : null}
+                    {page.title !== '' && !index ? <h1 class="title is-3" dangerouslySetInnerHTML={{ __html: titleHtml }}></h1> : null}
                     {/* Metadata */}
                     {page.layout !== 'page' ? <div class="article-meta is-size-7 is-uppercase level is-mobile">
                         <div class="level-left">
