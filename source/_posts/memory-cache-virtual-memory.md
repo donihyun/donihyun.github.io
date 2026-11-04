@@ -1,6 +1,6 @@
 ---
 title: 'Memory Systems: From SRAM Caches to TLBs'
-date: 2026-11-04 14:20:00
+date: 2026-05-03 14:20:00
 categories:
   - article
 tags:
@@ -82,7 +82,7 @@ $$
 \text{virtual address} = (\text{VPN},\ \text{offset}),
 $$
 
-where the offset is the lower $p$ bits. The page table translates the virtual page number (VPN) into a physical frame number (PFN); the offset is then copied unchanged:
+where the offset is the lower $p$ bits. The page table translates the virtual page number (VPN) into a physical frame number (PFN). The offset is then copied unchanged:
 
 $$
 \text{physical address} = (\text{PFN},\ \text{offset}).
@@ -112,7 +112,7 @@ Without address-space tags, changing processes requires invalidating translation
 
 ## Putting it together
 
-Caches optimize access to physical data; paging translates virtual pages into physical frames; and the TLB caches those translations so that the translation step does not become the new bottleneck. Segmentation explains an older logical-address model, while paging provides the fixed-size mapping used by most modern operating systems.
+Caches optimize access to physical data. Paging translates virtual pages into physical frames, and the TLB caches those translations so that the translation step does not become the new bottleneck. Segmentation explains an older logical-address model, while paging provides the fixed-size mapping used by most modern operating systems.
 
 The common theme is indirection with locality: keep the frequently used metadata and data close to the CPU, and use compact indexes to find the larger backing store only when necessary.
 
