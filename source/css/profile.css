@@ -43,12 +43,29 @@ article.article .content > style + :is(h1, h2, h3) { margin-top: 0; }
 .card.widget[data-type="profile"] .card-content > nav:first-child p.title {
   margin-bottom: 0.3rem;
   font-weight: 400;
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  line-height: 1.125;
 }
 .card.widget[data-type="profile"] .profile-author-subtitle {
-  font-size: 0.8em !important;
+  font-size: 1rem !important;
   font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
   white-space: pre-line;
-  margin-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+.card.widget[data-type="profile"] .card-content > nav:first-child p.is-size-6.is-flex {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0;
+}
+.card.widget[data-type="profile"] .card-content > nav:first-child .level-item.has-text-centered {
+  text-align: center !important;
 }
 .column-main, .column-left { min-width: 0; }
 #toc .level-left, #toc .level-item { min-width: 0; }
